@@ -21,10 +21,11 @@
 
 @property (nonatomic, copy) NSString* fileName;
 
+-(id) initWithFilename: (NSString*) name;
 -(BOOL) checkEnoughDiskSpace;
 -(BOOL) startRecording;
 -(void) pauseRecording;
 -(void) stopRecording;
--(UInt32) audioFileSize;
+//-(UInt32) audioFileSize;
 
 @end

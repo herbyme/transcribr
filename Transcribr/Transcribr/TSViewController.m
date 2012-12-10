@@ -7,9 +7,12 @@
 //
 
 #import "TSViewController.h"
+#import "TSAudioRecorder.h"
 
 @interface TSViewController ()
-
+{
+    TSAudioRecorder *audioRecorder;
+}
 @end
 
 @implementation TSViewController
@@ -37,6 +40,11 @@
 
     // Grab the current date & time
     [self setRecordDate:[NSDate date]];
+    
+    // Initialise the audioRecorder with filename & then start recording
+    NSString *dateString = [NSDateFormatter localizedStringFromDate:[self recordDate] dateStyle:NSDateFormatterLongStyle timeStyle:NSDateFormatterShortStyle];
+    audioRecorder = [[TSAudioRecorder alloc] initWithFilename:dateString];
+    [audioRecorder startRecording];
     
     // create the timer, hold a reference to the timer if we want to cancel ahead of countdown
     [NSTimer scheduledTimerWithTimeInterval:0.9 target:self selector:@selector(countdownUpdate:) userInfo:nil repeats:YES];

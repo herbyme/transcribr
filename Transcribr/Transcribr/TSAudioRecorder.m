@@ -10,11 +10,19 @@
 
 @implementation TSAudioRecorder
 
+-(id) initWithFilename: (NSString*) name {
+    self = [self init];
+    if (self) {
+        [self setFileName:name];
+    }
+    return self;
+}
+
 -(BOOL) startRecording {
     if ([self checkEnoughDiskSpace]) {
         NSArray *pathComponents = [NSArray arrayWithObjects:
                                    [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
-                                   @"MyRecording.m4a",
+                                   [[self fileName] stringByAppendingString:@".m4a"],
                                    nil];
         NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
         NSLog(@"URL: %@", outputFileURL);
