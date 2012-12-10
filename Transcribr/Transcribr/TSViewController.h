@@ -14,6 +14,7 @@
 @interface TSViewController : UIViewController
 
 @property (strong, nonatomic) NSDate *recordDate;
+@property (assign, nonatomic) BOOL pause;
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLeftLabel;
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
