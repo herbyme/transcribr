@@ -53,7 +53,7 @@
         <scene sceneID="lae-bm-7PI">
             <objects>
                 <navigationController id="Mn7-Dz-JOA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Record" id="mnm-5h-afr"/>
+                    <tabBarItem key="tabBarItem" title="Record" image="66-microphone.png" id="mnm-5h-afr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UwK-re-zxC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -68,20 +68,35 @@
             </objects>
             <point key="canvasLocation" x="831" y="66"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="zCb-Ql-QS8">
+        <!--Table View Controller-->
+        <scene sceneID="90v-gt-Sae">
             <objects>
-                <viewController id="CQq-RM-UoH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="btM-id-sE3">
+                <tableViewController id="rJ1-gL-r9I" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1HU-cF-owb">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jO5-3J-PWa"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ND-Bk-135" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6fu-GF-fsS">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rJ1-gL-r9I" id="gYc-Op-bCa"/>
+                            <outlet property="delegate" destination="rJ1-gL-r9I" id="r4C-8n-sea"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="k8E-51-9WL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSL-PL-P7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357" y="759"/>
+            <point key="canvasLocation" x="1245" y="749"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JiO-2B-Bvg">
@@ -95,33 +110,37 @@
                     </tabBar>
                     <connections>
                         <segue destination="Mn7-Dz-JOA" kind="relationship" relationship="viewControllers" id="gjm-dq-Hm6"/>
-                        <segue destination="PC6-LL-yqZ" kind="relationship" relationship="viewControllers" id="G96-ac-9RU"/>
+                        <segue destination="wxY-AT-Vez" kind="relationship" relationship="viewControllers" id="BMa-Sq-XCh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MmJ-OA-nCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="66"/>
         </scene>
-        <!--Navigation Controller - Item-->
-        <scene sceneID="aRK-F5-r7T">
+        <!--Navigation Controller - Minutes-->
+        <scene sceneID="7gi-nf-eXE">
             <objects>
-                <navigationController id="PC6-LL-yqZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5Ba-S3-w2y"/>
+                <navigationController id="wxY-AT-Vez" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Minutes" image="160-voicemail-2.png" id="PYm-O5-GYv"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WdE-9g-Age">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I6C-Kg-cZP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="CQq-RM-UoH" kind="relationship" relationship="rootViewController" id="aRT-4A-VNg"/>
+                        <segue destination="rJ1-gL-r9I" kind="relationship" relationship="rootViewController" id="utE-4y-rZT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7bK-K7-DE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCH-gR-d8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="831" y="759"/>
+            <point key="canvasLocation" x="841" y="749"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="160-voicemail-2.png" width="26" height="18"/>
+        <image name="66-microphone.png" width="12" height="24"/>
+    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

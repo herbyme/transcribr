@@ -26,6 +26,10 @@
 		945594C91675CD17005B536C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945594C61675CD17005B536C /* Default-568h@2x.png */; };
 		945594CA1675CD17005B536C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 945594C71675CD17005B536C /* Default.png */; };
 		945594CB1675CD17005B536C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945594C81675CD17005B536C /* Default@2x.png */; };
+		945594CE1675CED6005B536C /* 66-microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 945594CC1675CED6005B536C /* 66-microphone.png */; };
+		945594CF1675CED6005B536C /* 66-microphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945594CD1675CED6005B536C /* 66-microphone@2x.png */; };
+		945594D21675D02C005B536C /* 160-voicemail-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 945594D01675D02C005B536C /* 160-voicemail-2.png */; };
+		945594D31675D02C005B536C /* 160-voicemail-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945594D11675D02C005B536C /* 160-voicemail-2@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,10 @@
 		945594C61675CD17005B536C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		945594C71675CD17005B536C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		945594C81675CD17005B536C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		945594CC1675CED6005B536C /* 66-microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "66-microphone.png"; sourceTree = "<group>"; };
+		945594CD1675CED6005B536C /* 66-microphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "66-microphone@2x.png"; sourceTree = "<group>"; };
+		945594D01675D02C005B536C /* 160-voicemail-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "160-voicemail-2.png"; sourceTree = "<group>"; };
+		945594D11675D02C005B536C /* 160-voicemail-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "160-voicemail-2@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +186,10 @@
 		945594C51675CD17005B536C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				945594D01675D02C005B536C /* 160-voicemail-2.png */,
+				945594D11675D02C005B536C /* 160-voicemail-2@2x.png */,
+				945594CC1675CED6005B536C /* 66-microphone.png */,
+				945594CD1675CED6005B536C /* 66-microphone@2x.png */,
 				945594C61675CD17005B536C /* Default-568h@2x.png */,
 				945594C71675CD17005B536C /* Default.png */,
 				945594C81675CD17005B536C /* Default@2x.png */,
@@ -242,6 +254,10 @@
 				945594C91675CD17005B536C /* Default-568h@2x.png in Resources */,
 				945594CA1675CD17005B536C /* Default.png in Resources */,
 				945594CB1675CD17005B536C /* Default@2x.png in Resources */,
+				945594CE1675CED6005B536C /* 66-microphone.png in Resources */,
+				945594CF1675CED6005B536C /* 66-microphone@2x.png in Resources */,
+				945594D21675D02C005B536C /* 160-voicemail-2.png in Resources */,
+				945594D31675D02C005B536C /* 160-voicemail-2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +359,7 @@
 				GCC_PREFIX_HEADER = "Transcribr/Transcribr-Prefix.pch";
 				INFOPLIST_FILE = "Transcribr/Transcribr-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -354,6 +371,7 @@
 				GCC_PREFIX_HEADER = "Transcribr/Transcribr-Prefix.pch";
 				INFOPLIST_FILE = "Transcribr/Transcribr-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
