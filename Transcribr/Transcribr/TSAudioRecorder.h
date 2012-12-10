@@ -11,6 +11,7 @@
 #import "AudioFileWriter.h"
 
 #define AUDIO_MAX_SIZE 144000 // Roughly 30mins of Audio
+#define FILE_MAX_SIZE 50      // Roughly Max of 50Mb of Audio for 30Mins
 
 @interface TSAudioRecorder : NSObject
 {
@@ -21,7 +22,7 @@
 @property (nonatomic, copy) NSString* fileName;
 
 -(BOOL) checkEnoughDiskSpace;
--(void) startRecording;
+-(BOOL) startRecording;
 -(void) pauseRecording;
 -(void) stopRecording;
 -(UInt32) audioFileSize;
