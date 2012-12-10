@@ -10,4 +10,6 @@
 
 @interface TSViewController : UIViewController
 
+- (IBAction)recordAction:(id)sender;
+
 @end
