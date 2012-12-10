@@ -13,13 +13,19 @@
 		9455948716758FDA005B536C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9455948516758FDA005B536C /* InfoPlist.strings */; };
 		9455948916758FDA005B536C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9455948816758FDA005B536C /* main.m */; };
 		9455948D16758FDA005B536C /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9455948C16758FDA005B536C /* TSAppDelegate.m */; };
-		9455948F16758FDA005B536C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9455948E16758FDA005B536C /* Default.png */; };
-		9455949116758FDA005B536C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9455949016758FDA005B536C /* Default@2x.png */; };
-		9455949316758FDA005B536C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9455949216758FDA005B536C /* Default-568h@2x.png */; };
 		9455949616758FDA005B536C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9455949416758FDA005B536C /* MainStoryboard.storyboard */; };
 		9455949916758FDA005B536C /* TSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9455949816758FDA005B536C /* TSViewController.m */; };
 		945594A01675909B005B536C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9455949F1675909B005B536C /* AudioToolbox.framework */; };
 		945594A2167590A2005B536C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945594A1167590A2005B536C /* Accelerate.framework */; };
+		945594B016759B31005B536C /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 945594A916759B31005B536C /* AudioFileReader.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945594B116759B31005B536C /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 945594AB16759B31005B536C /* AudioFileWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945594B216759B31005B536C /* Novocaine.m in Sources */ = {isa = PBXBuildFile; fileRef = 945594AD16759B31005B536C /* Novocaine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945594B316759B31005B536C /* RingBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 945594AF16759B31005B536C /* RingBuffer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945594C01675A867005B536C /* TSAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 945594BF1675A867005B536C /* TSAudioRecorder.m */; };
+		945594C31675A8D4005B536C /* TSAudioUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 945594C21675A8D4005B536C /* TSAudioUploader.m */; };
+		945594C91675CD17005B536C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945594C61675CD17005B536C /* Default-568h@2x.png */; };
+		945594CA1675CD17005B536C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 945594C71675CD17005B536C /* Default.png */; };
+		945594CB1675CD17005B536C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945594C81675CD17005B536C /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,14 +39,26 @@
 		9455948A16758FDA005B536C /* Transcribr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Transcribr-Prefix.pch"; sourceTree = "<group>"; };
 		9455948B16758FDA005B536C /* TSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
 		9455948C16758FDA005B536C /* TSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSAppDelegate.m; sourceTree = "<group>"; };
-		9455948E16758FDA005B536C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		9455949016758FDA005B536C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		9455949216758FDA005B536C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9455949516758FDA005B536C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9455949716758FDA005B536C /* TSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSViewController.h; sourceTree = "<group>"; };
 		9455949816758FDA005B536C /* TSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSViewController.m; sourceTree = "<group>"; };
 		9455949F1675909B005B536C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		945594A1167590A2005B536C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		945594A816759B31005B536C /* AudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileReader.h; sourceTree = "<group>"; };
+		945594A916759B31005B536C /* AudioFileReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioFileReader.mm; sourceTree = "<group>"; };
+		945594AA16759B31005B536C /* AudioFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileWriter.h; sourceTree = "<group>"; };
+		945594AB16759B31005B536C /* AudioFileWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileWriter.m; sourceTree = "<group>"; };
+		945594AC16759B31005B536C /* Novocaine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Novocaine.h; sourceTree = "<group>"; };
+		945594AD16759B31005B536C /* Novocaine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Novocaine.m; sourceTree = "<group>"; };
+		945594AE16759B31005B536C /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
+		945594AF16759B31005B536C /* RingBuffer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RingBuffer.mm; sourceTree = "<group>"; };
+		945594BE1675A867005B536C /* TSAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAudioRecorder.h; sourceTree = "<group>"; };
+		945594BF1675A867005B536C /* TSAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAudioRecorder.m; sourceTree = "<group>"; };
+		945594C11675A8D4005B536C /* TSAudioUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAudioUploader.h; sourceTree = "<group>"; };
+		945594C21675A8D4005B536C /* TSAudioUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAudioUploader.m; sourceTree = "<group>"; };
+		945594C61675CD17005B536C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		945594C71675CD17005B536C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		945594C81675CD17005B536C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +80,6 @@
 		9455946D16758FDA005B536C = {
 			isa = PBXGroup;
 			children = (
-				945594A1167590A2005B536C /* Accelerate.framework */,
-				9455949F1675909B005B536C /* AudioToolbox.framework */,
 				9455948216758FDA005B536C /* Transcribr */,
 				9455947B16758FDA005B536C /* Frameworks */,
 				9455947916758FDA005B536C /* Products */,
@@ -81,6 +97,8 @@
 		9455947B16758FDA005B536C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				945594A1167590A2005B536C /* Accelerate.framework */,
+				9455949F1675909B005B536C /* AudioToolbox.framework */,
 				9455947C16758FDA005B536C /* UIKit.framework */,
 				9455947E16758FDA005B536C /* Foundation.framework */,
 				9455948016758FDA005B536C /* CoreGraphics.framework */,
@@ -104,13 +122,12 @@
 		9455948316758FDA005B536C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				945594C51675CD17005B536C /* Images */,
+				945594A716759B31005B536C /* Novocaine */,
 				9455948416758FDA005B536C /* Transcribr-Info.plist */,
 				9455948516758FDA005B536C /* InfoPlist.strings */,
 				9455948816758FDA005B536C /* main.m */,
 				9455948A16758FDA005B536C /* Transcribr-Prefix.pch */,
-				9455948E16758FDA005B536C /* Default.png */,
-				9455949016758FDA005B536C /* Default@2x.png */,
-				9455949216758FDA005B536C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -118,6 +135,10 @@
 		945594A31675988A005B536C /* Recorder */ = {
 			isa = PBXGroup;
 			children = (
+				945594BE1675A867005B536C /* TSAudioRecorder.h */,
+				945594BF1675A867005B536C /* TSAudioRecorder.m */,
+				945594C11675A8D4005B536C /* TSAudioUploader.h */,
+				945594C21675A8D4005B536C /* TSAudioUploader.m */,
 			);
 			name = Recorder;
 			sourceTree = "<group>";
@@ -137,6 +158,31 @@
 				9455949816758FDA005B536C /* TSViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		945594A716759B31005B536C /* Novocaine */ = {
+			isa = PBXGroup;
+			children = (
+				945594A816759B31005B536C /* AudioFileReader.h */,
+				945594A916759B31005B536C /* AudioFileReader.mm */,
+				945594AA16759B31005B536C /* AudioFileWriter.h */,
+				945594AB16759B31005B536C /* AudioFileWriter.m */,
+				945594AC16759B31005B536C /* Novocaine.h */,
+				945594AD16759B31005B536C /* Novocaine.m */,
+				945594AE16759B31005B536C /* RingBuffer.h */,
+				945594AF16759B31005B536C /* RingBuffer.mm */,
+			);
+			path = Novocaine;
+			sourceTree = "<group>";
+		};
+		945594C51675CD17005B536C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				945594C61675CD17005B536C /* Default-568h@2x.png */,
+				945594C71675CD17005B536C /* Default.png */,
+				945594C81675CD17005B536C /* Default@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,10 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9455948716758FDA005B536C /* InfoPlist.strings in Resources */,
-				9455948F16758FDA005B536C /* Default.png in Resources */,
-				9455949116758FDA005B536C /* Default@2x.png in Resources */,
-				9455949316758FDA005B536C /* Default-568h@2x.png in Resources */,
 				9455949616758FDA005B536C /* MainStoryboard.storyboard in Resources */,
+				945594C91675CD17005B536C /* Default-568h@2x.png in Resources */,
+				945594CA1675CD17005B536C /* Default.png in Resources */,
+				945594CB1675CD17005B536C /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +255,12 @@
 				9455948916758FDA005B536C /* main.m in Sources */,
 				9455948D16758FDA005B536C /* TSAppDelegate.m in Sources */,
 				9455949916758FDA005B536C /* TSViewController.m in Sources */,
+				945594B016759B31005B536C /* AudioFileReader.mm in Sources */,
+				945594B116759B31005B536C /* AudioFileWriter.m in Sources */,
+				945594B216759B31005B536C /* Novocaine.m in Sources */,
+				945594B316759B31005B536C /* RingBuffer.mm in Sources */,
+				945594C01675A867005B536C /* TSAudioRecorder.m in Sources */,
+				945594C31675A8D4005B536C /* TSAudioUploader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
