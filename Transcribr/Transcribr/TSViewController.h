@@ -8,12 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-#define MAX_TIME 1800 //30 minutes = 1800 seconds
+#define MAX_RECORDING_TIME 1800 //30 minutes = 1800 seconds
+#define GRAYED_OUT 0.5
 
 @interface TSViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *TimeLeftLabel;
+@property (strong, nonatomic) NSDate *recordDate;
 
-- (IBAction)recordAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *timeLeftLabel;
+@property (weak, nonatomic) IBOutlet UIButton *recordButton;
+@property (weak, nonatomic) IBOutlet UIButton *pauseButton;
+@property (weak, nonatomic) IBOutlet UIButton *stopButton;
+
+-(void) countdownUpdate:(NSTimer*) timer;
+-(IBAction) recordAction:(id)sender;
 
 @end

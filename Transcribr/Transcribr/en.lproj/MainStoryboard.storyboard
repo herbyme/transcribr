@@ -31,7 +31,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="30:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5v-Rh-yRz">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="OF0-s9-lyU"/>
-                                    <constraint firstAttribute="width" constant="134" id="tPe-Gf-Q6V"/>
+                                    <constraint firstAttribute="width" constant="136" id="nc7-OM-lcA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -81,13 +81,10 @@
                             <constraint firstItem="5pi-V5-o2O" firstAttribute="bottom" secondItem="2mt-pb-NVD" secondAttribute="bottom" type="default" id="6tp-V0-7Rd"/>
                             <constraint firstItem="5pi-V5-o2O" firstAttribute="leading" secondItem="2mt-pb-NVD" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Vp1-Cf-wZP"/>
                             <constraint firstItem="bv4-6l-cIH" firstAttribute="top" secondItem="3" secondAttribute="top" constant="203" id="Z8A-VH-XV3"/>
-                            <constraint firstItem="2mt-pb-NVD" firstAttribute="baseline" secondItem="bv4-6l-cIH" secondAttribute="baseline" type="default" id="ZQK-Dl-QHf"/>
                             <constraint firstItem="2mt-pb-NVD" firstAttribute="leading" secondItem="bv4-6l-cIH" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="g6k-x0-BlM"/>
                             <constraint firstItem="bv4-6l-cIH" firstAttribute="top" secondItem="2mt-pb-NVD" secondAttribute="top" type="default" id="hYN-LP-kyF"/>
                             <constraint firstItem="y38-r6-tGX" firstAttribute="centerX" secondItem="2mt-pb-NVD" secondAttribute="centerX" type="default" id="lBc-CY-oTp"/>
-                            <constraint firstItem="5pi-V5-o2O" firstAttribute="baseline" secondItem="2mt-pb-NVD" secondAttribute="baseline" type="default" id="sqT-3K-D06"/>
                             <constraint firstItem="y38-r6-tGX" firstAttribute="top" secondItem="3" secondAttribute="top" constant="70" id="vDI-7a-dsb"/>
-                            <constraint firstItem="bv4-6l-cIH" firstAttribute="baseline" secondItem="5pi-V5-o2O" secondAttribute="baseline" type="default" id="vUJ-iK-Fcf"/>
                             <constraint firstItem="f5v-Rh-yRz" firstAttribute="leading" secondItem="2mt-pb-NVD" secondAttribute="leading" type="default" id="vdp-nL-rJe"/>
                             <constraint firstItem="bv4-6l-cIH" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="8" id="x6R-3G-Vmn"/>
                             <constraint firstItem="bv4-6l-cIH" firstAttribute="bottom" secondItem="2mt-pb-NVD" secondAttribute="bottom" type="default" id="xBk-HV-fwz"/>
@@ -95,7 +92,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Record Meeting" id="EY7-XX-s3L"/>
                     <connections>
-                        <outlet property="TimeLeftLabel" destination="f5v-Rh-yRz" id="6YQ-Ql-cI5"/>
+                        <outlet property="pauseButton" destination="bv4-6l-cIH" id="ysk-T6-I8g"/>
+                        <outlet property="recordButton" destination="2mt-pb-NVD" id="RD0-C5-ZxC"/>
+                        <outlet property="stopButton" destination="5pi-V5-o2O" id="thd-Cf-G2m"/>
+                        <outlet property="timeLeftLabel" destination="f5v-Rh-yRz" id="lsF-uD-5si"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -202,7 +202,10 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSViewController.h"/>
             <relationships>
                 <relationship kind="action" name="recordAction:"/>
-                <relationship kind="outlet" name="TimeLeftLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pauseButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="recordButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="timeLeftLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>
