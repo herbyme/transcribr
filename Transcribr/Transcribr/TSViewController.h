@@ -20,7 +20,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *pauseButton;
 @property (weak, nonatomic) IBOutlet UIButton *stopButton;
 
--(void) countdownUpdate:(NSTimer*) timer;
--(IBAction) recordAction:(id)sender;
+- (void)countdownUpdate:(NSTimer*)timer;
+- (IBAction)recordAction:(id)sender;
+- (IBAction)pauseAction:(id)sender;
+- (IBAction)stopAction:(id)sender;
 
 @end

@@ -59,6 +59,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pauseAction:" destination="2" eventType="touchUpInside" id="bwC-HS-Pbl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pi-V5-o2O">
                                 <constraints>
@@ -72,6 +75,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopAction:" destination="2" eventType="touchUpInside" id="iPC-CU-D9Q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -201,7 +207,9 @@
         <class className="TSViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSViewController.h"/>
             <relationships>
+                <relationship kind="action" name="pauseAction:"/>
                 <relationship kind="action" name="recordAction:"/>
+                <relationship kind="action" name="stopAction:"/>
                 <relationship kind="outlet" name="pauseButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="recordButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>

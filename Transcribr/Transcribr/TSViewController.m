@@ -44,7 +44,7 @@
     // Initialise the audioRecorder with filename & then start recording
     NSString *dateString = [NSDateFormatter localizedStringFromDate:[self recordDate] dateStyle:NSDateFormatterLongStyle timeStyle:NSDateFormatterShortStyle];
     audioRecorder = [[TSAudioRecorder alloc] initWithFilename:dateString];
-    [audioRecorder startRecording];
+//    [audioRecorder startRecording];
     
     // create the timer, hold a reference to the timer if we want to cancel ahead of countdown
     [NSTimer scheduledTimerWithTimeInterval:0.9 target:self selector:@selector(countdownUpdate:) userInfo:nil repeats:YES];
@@ -56,6 +56,41 @@
     [[self pauseButton] setAlpha:1];
     [[self stopButton] setAlpha:1];
     [[self recordButton] setAlpha:GRAYED_OUT];
+}
+
+- (IBAction)pauseAction:(id)sender {
+
+    [[self pauseButton] setEnabled:YES];
+    [[self pauseButton] setAlpha:1];
+    
+    if ([[[[self pauseButton] titleLabel] text] isEqualToString:@"Pause"]) {
+        [[self pauseButton] setTitle:@"Resume" forState:UIControlStateNormal];
+        
+        // Ungray out pause & gray out rest
+        [[self stopButton] setEnabled:NO];
+        [[self stopButton] setAlpha:GRAYED_OUT];
+    }
+    else {
+        [[self pauseButton] setTitle:@"Pause" forState:UIControlStateNormal];
+        
+        // Ungray out pause & gray out rest
+        [[self stopButton] setEnabled:YES];
+        [[self stopButton] setAlpha:1];
+    }
+}
+
+- (IBAction)stopAction:(id)sender {
+    // Ungray out pause & gray out rest
+    [[self pauseButton] setEnabled:NO];
+    [[self stopButton] setEnabled:NO];
+    [[self recordButton] setEnabled:YES];
+    [[self pauseButton] setAlpha:GRAYED_OUT];
+    [[self stopButton] setAlpha:GRAYED_OUT];
+    [[self recordButton] setAlpha:1];
+    
+    if ([[[[self pauseButton] titleLabel] text] isEqualToString:@"Resume"]) {
+        [[self pauseButton] setTitle:@"Pause" forState:UIControlStateNormal];
+    }
 }
 
 -(void)countdownUpdate:(NSTimer*) timer {
