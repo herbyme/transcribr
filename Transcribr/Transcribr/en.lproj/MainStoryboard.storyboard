@@ -14,8 +14,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mt-pb-NVD">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="161" id="ALC-KD-40z"/>
-                                    <constraint firstAttribute="height" constant="96" id="HWa-3N-Ckz"/>
+                                    <constraint firstAttribute="width" constant="131" id="ZR6-ci-RUM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Record">
@@ -29,21 +28,75 @@
                                     <action selector="recordAction:" destination="2" eventType="touchUpInside" id="SaE-cw-RG3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time Left: 30:00:00 min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5v-Rh-yRz">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="30:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5v-Rh-yRz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="OF0-s9-lyU"/>
+                                    <constraint firstAttribute="width" constant="134" id="tPe-Gf-Q6V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time Left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y38-r6-tGX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="29E-D6-4GU"/>
+                                    <constraint firstAttribute="height" constant="29" id="oYK-xn-6Ke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bv4-6l-cIH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="Gkj-r8-t8I"/>
+                                    <constraint firstAttribute="width" constant="80" id="M1B-go-r6F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pi-V5-o2O">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Cai-yP-PgA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="f5v-Rh-yRz" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="73" id="CMs-jF-sqf"/>
-                            <constraint firstItem="f5v-Rh-yRz" firstAttribute="top" secondItem="3" secondAttribute="top" constant="130" id="KvZ-Bb-lDn"/>
-                            <constraint firstItem="2mt-pb-NVD" firstAttribute="top" secondItem="3" secondAttribute="top" constant="209" id="Oa1-tQ-1ed"/>
-                            <constraint firstItem="2mt-pb-NVD" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="SJb-f3-Iuf"/>
+                            <constraint firstItem="f5v-Rh-yRz" firstAttribute="top" secondItem="3" secondAttribute="top" constant="102" id="0IJ-Jy-4lM"/>
+                            <constraint firstItem="5pi-V5-o2O" firstAttribute="top" secondItem="2mt-pb-NVD" secondAttribute="top" type="default" id="4A5-Rt-NTM"/>
+                            <constraint firstItem="5pi-V5-o2O" firstAttribute="bottom" secondItem="2mt-pb-NVD" secondAttribute="bottom" type="default" id="6tp-V0-7Rd"/>
+                            <constraint firstItem="5pi-V5-o2O" firstAttribute="leading" secondItem="2mt-pb-NVD" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Vp1-Cf-wZP"/>
+                            <constraint firstItem="bv4-6l-cIH" firstAttribute="top" secondItem="3" secondAttribute="top" constant="203" id="Z8A-VH-XV3"/>
+                            <constraint firstItem="2mt-pb-NVD" firstAttribute="baseline" secondItem="bv4-6l-cIH" secondAttribute="baseline" type="default" id="ZQK-Dl-QHf"/>
+                            <constraint firstItem="2mt-pb-NVD" firstAttribute="leading" secondItem="bv4-6l-cIH" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="g6k-x0-BlM"/>
+                            <constraint firstItem="bv4-6l-cIH" firstAttribute="top" secondItem="2mt-pb-NVD" secondAttribute="top" type="default" id="hYN-LP-kyF"/>
+                            <constraint firstItem="y38-r6-tGX" firstAttribute="centerX" secondItem="2mt-pb-NVD" secondAttribute="centerX" type="default" id="lBc-CY-oTp"/>
+                            <constraint firstItem="5pi-V5-o2O" firstAttribute="baseline" secondItem="2mt-pb-NVD" secondAttribute="baseline" type="default" id="sqT-3K-D06"/>
+                            <constraint firstItem="y38-r6-tGX" firstAttribute="top" secondItem="3" secondAttribute="top" constant="70" id="vDI-7a-dsb"/>
+                            <constraint firstItem="bv4-6l-cIH" firstAttribute="baseline" secondItem="5pi-V5-o2O" secondAttribute="baseline" type="default" id="vUJ-iK-Fcf"/>
+                            <constraint firstItem="f5v-Rh-yRz" firstAttribute="leading" secondItem="2mt-pb-NVD" secondAttribute="leading" type="default" id="vdp-nL-rJe"/>
+                            <constraint firstItem="bv4-6l-cIH" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="8" id="x6R-3G-Vmn"/>
+                            <constraint firstItem="bv4-6l-cIH" firstAttribute="bottom" secondItem="2mt-pb-NVD" secondAttribute="bottom" type="default" id="xBk-HV-fwz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Record Meeting" id="EY7-XX-s3L"/>
+                    <connections>
+                        <outlet property="TimeLeftLabel" destination="f5v-Rh-yRz" id="6YQ-Ql-cI5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,7 +121,7 @@
             </objects>
             <point key="canvasLocation" x="831" y="66"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Meeting Minutes-->
         <scene sceneID="90v-gt-Sae">
             <objects>
                 <tableViewController id="rJ1-gL-r9I" sceneMemberID="viewController">
@@ -92,7 +145,7 @@
                             <outlet property="delegate" destination="rJ1-gL-r9I" id="r4C-8n-sea"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="k8E-51-9WL"/>
+                    <navigationItem key="navigationItem" title="Meeting Minutes" id="k8E-51-9WL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSL-PL-P7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,11 +170,11 @@
             </objects>
             <point key="canvasLocation" x="305" y="66"/>
         </scene>
-        <!--Navigation Controller - Minutes-->
+        <!--Navigation Controller - Item-->
         <scene sceneID="7gi-nf-eXE">
             <objects>
                 <navigationController id="wxY-AT-Vez" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Minutes" image="160-voicemail-2.png" id="PYm-O5-GYv"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="160-voicemail-2.png" id="PYm-O5-GYv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="I6C-Kg-cZP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -149,6 +202,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSViewController.h"/>
             <relationships>
                 <relationship kind="action" name="recordAction:"/>
+                <relationship kind="outlet" name="TimeLeftLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>
